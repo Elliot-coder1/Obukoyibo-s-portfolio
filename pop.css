@@ -1,0 +1,390 @@
+/*home page styles*/
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1e2a78, #1e2a78 50%, #0d0d0d 50%);
+            color: white;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+        }
+        .header .logo {
+            display: flex;
+            align-items: center;
+        }
+        .header .logo img {
+            width: 30px;
+            margin-right: 10px;
+        }
+        .header nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .content .text {
+            max-width: 500px;
+        }
+        .content .text h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .content .text h1 span {
+            color: #3b82f6;
+        }
+        .content .text p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .content .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .content .buttons a {
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .content .buttons .download {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .content .buttons .work {
+            border: 1px solid white;
+            color: white;
+        }
+        .content .image {
+            position: relative;
+        }
+        .content .image img {
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .content .image .decor {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 50px;
+            height: 50px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+        }
+        .content .image .decor2 {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 50px;
+            height: 50px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+        }
+        .social {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .social a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .scroll-down i {
+            font-size: 24px;
+        }
+        a {
+            text-decoration: none; /* Remove underline from links */
+            color:white; /* Change link color as needed */
+        }
+        
+        a:hover {
+            text-decoration: underline; /* Optional: add underline on hover */
+            color: #007BFF; /* Optional: change color on hover */
+        }
+
+        @media (max-width: 1200px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .content .text {
+                text-align: center;
+            }
+            .content .image {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .header nav {
+                margin-top: 10px;
+            }
+            .header nav a {
+                margin: 0 10px;
+            }
+            .content .text h1 {
+                font-size: 36px;
+            }
+            .content .text p {
+                font-size: 16px;
+            }
+            .content .buttons a {
+                padding: 8px 16px;
+            }
+            .content .image img {
+                width: 250px;
+                height: 250px;
+            }
+
+             
+        }
+
+        @media (max-width: 480px) {
+            .header nav a {
+                margin: 0 5px;
+                font-size: 14px;
+            }
+            .content .text h1 {
+                font-size: 28px;
+            }
+            .content .text p {
+                font-size: 14px;
+            }
+            .content .buttons a {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+            .content .image img {
+                width: 200px;
+                height: 200px;
+            }
+            .social {
+                right: 10px;
+            }
+            .social a {
+                font-size: 20px;
+            }
+            .scroll-down i {
+                font-size: 20px;
+            }
+        }
+  
+        .links-section {
+            margin-top: 20px;
+            text-align: left; /* Align links to the left */
+        }
+        
+        .links-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .links-section ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0; /* Remove padding */
+        }
+        
+        .links-section li {
+            margin-bottom: 5px; /* Space between links */
+        }
+        
+        .links-section a {
+            color: #3b82f6; /* Change link color */
+            text-decoration: none; /* Remove underline */
+        }
+        
+        .links-section a:hover {
+            text-decoration: underline;
+            color: white; /* Add underline on hover */
+        }
+
+/*end of home pages styles*/
+
+
+/* Base styles for the contact form */
+.content .form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.content .form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.content .form input, 
+.content .form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.content .form button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content .form button:hover {
+    background-color: #007BFF; /* Darker shade on hover */
+}
+
+/* Form Container */
+.form {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px; /* Space above the form */
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Inner spacing */
+    margin: 10px 0; /* Space between fields */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Focus Effect */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styling */
+button {
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Inner spacing */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header nav {
+        margin-top: 10px;
+    }
+
+    .header nav a {
+        margin: 0 10px;
+    }
+
+    .content .text h1 {
+        font-size: 36px;
+    }
+
+    .content .text p {
+        font-size: 16px;
+    }
+
+    .content .form {
+        max-width: 90%; /* Make form width responsive */
+    }
+
+    .content .form input, 
+    .content .form textarea {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .content .form button {
+        padding: 8px; /* Adjust button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .header nav a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+
+    .content .text h1 {
+        font-size: 28px;
+    }
+
+    .content .text p {
+        font-size: 14px;
+    }
+
+    .content .form {
+        max-width: 100%; /* Full width on very small screens */
+    }
+
+    .content .form input, 
+    .content .form textarea {
+        font-size: 12px; /* Further adjust font size */
+    }
+
+    .content .form button {
+        padding: 6px; /* Further adjust button size */
+    }
+}
