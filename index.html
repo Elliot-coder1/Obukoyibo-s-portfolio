@@ -6,31 +6,39 @@
   <title>
     Obukoyibo's Portfolio
   </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="../Obukoyibo-s-portfolio/new.css">
+  <link rel="stylesheet" href="new.css">
  </head>
  <body>
-  <div class="container">
-   <div class="header">
+  <header>
+   <div class="navbar">
     <div class="logo">
-     <img alt="Logo" height="30" src="../Obukoyibo-s-portfolio/IMG_20250107_183009_073.jpg" width="30"/>
-     <span>
-      Obukoyibo oghenefejiro elliot
-     </span>
+      <a href="#">Frontend Web Developer</a>
     </div>
-    <nav>
-     <a href="index.html">
-      Home
-     </a>
-     <a href="pop.html">
-      Portfolio
-     </a>
-     <a href="contact.html">
-      Contact
-     </a>
-    </nav>
+    <ul class="links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pop.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="#" class="action_btn">Get Started</a>
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
    </div>
+  
+  <div class="dropdown_menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pop.html">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li> <a href="#" class="action_btn">Get Started</a></li>
+  </div>
+
+
+
+
    <div class="content">
     <div class="text">
      <p>
@@ -64,14 +72,15 @@
      </div>
     </div>
     <div class="image">
-     <img alt="ELLIOT" height="300" src="../Obukoyibo-s-portfolio/IMG_20250107_183009_073.jpg" width="300"/>
+     <img alt="ELLIOT" height="300" src="Ellie.png" width="300"/>
      <div class="decor">
      </div>
      <div class="decor2">
      </div>
     </div>
    </div>
-  </div>
+  </header>
+  <script src="script.js"></script>
   <footer class="footer">
     <p>&copy; 2025 Obukoyibo oghenefejiro Elliot. All Rights Reserved.</p>
     <p>09134379366</p>
