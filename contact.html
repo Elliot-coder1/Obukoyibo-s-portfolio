@@ -3,48 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
     <link rel="stylesheet" href="pop.css">
-    <title>Obukoyibo's Portfolio Frontend web developer</title>
+    <link rel="stylesheet" href="new.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
+    <header>
+        <div class="navbar">
             <div class="logo">
-                <img src="IMG_20250107_183009_073.jpg" alt="Logo">
-                <h1>Contact Us</h1>
+                <a href="index.html">Frontend Web Developer</a>
             </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="pop.html">Portfolio</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
-
-        <div class="content">
-            <div class="text">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pop.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="pop.html" class="action_btn">My Work</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pop.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li> <a href="pop.html" class="action_btn">My Work</a></li>
+            </div>
+        </div>
+    </header>
+    <div class="contact-container">
+        <div class="contact-content">
+            <div class="contact-text">
                 <h1>Get in Touch</h1>
                 <p>If you have any questions, feel free to reach out using the form below.</p>
             </div>
-            <div class="form">
-                <form id="messageForm" action="#" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Name" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                    
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
-                    
-                    <button type="submit">Send Message</button>
+            <div class="contact-form-container">
+                <form action="https://formsubmit.co/obukoyibooghenefejiro@gmail.com" method="POST">
+                    <div class="contact-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                        <input type="hidden" name="_autoresponse" value="your message was recieved we will get back to you">
+                        <input type="hidden" name="_template" value="table">
+                        <button type="submit">Send Message</button>
+                    </div>
                 </form>
             </div>
         </div>
-        <div id="response"></div>
     </div>
     <footer class="footer">
-        <p>&copy; 2024 Obukoyibo oghenefejiro Elliot. All Rights Reserved.</p>
+        <p>&copy; 2025 Obukoyibo oghenefejiro Elliot. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
