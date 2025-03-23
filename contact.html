@@ -6,34 +6,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <title>Contact Us</title>
     <link rel="stylesheet" href="new.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-         <div class="logo">
-           <a href="index.html">Frontend Web Developer</a>
-         </div>
-         <ul class="links">
-         <li><a href="index.html">Home</a></li>
-         <li><a href="pop.html">Portfolio</a></li>
-         <li><a href="contact.html">Contact</a></li>
-         </ul>
-         <a href="pop.html" class="action_btn">My Work</a>
-         <div class="toggle_btn">
-           <i class="fa-solid fa-bars"></i>
-         </div>
-        
-       
-       <div class="dropdown_menu">
-         <li><a href="index.html">Home</a></li>
-         <li><a href="pop.html">Portfolio</a></li>
-         <li><a href="contact.html">Contact</a></li>
-         <li> <a href="pop.html" class="action_btn">My Work</a></li>
-       </div>
-     </div>
-       </header>
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">Frontend Web Developer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse justify-content-center" id="mynavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="pop.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <a href="certi.html" class="btn btn-dark">My Certificate</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="contact-container">
         <div class="contact-content">
             <div class="contact-text">
