@@ -1,96 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <title>
-    Obukoyibo's Portfolio
-  </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="new.css">
- </head>
- <body>
-  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold fs-4" href="index.html">Frontend Web Developer</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse justify-content-center" id="mynavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-secondary" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-secondary" href="pop.html">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-secondary" href="contact.html">Contact</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ms-auto">
-                <a href="certi.html" class="btn btn-dark">My Certificate</a>
-            </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Ellie.png" type="image/x-icon" />
+    <title>Obukoyibo Oghenefejiro Elliot - Frontend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #000000 0%, #333333 100%);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-white">Ellie Dev</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-black transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-black transition">About</a>
+                    <a href="#projects" class="text-gray-700 hover:text-black transition">Projects</a>
+                    <a href="#skills" class="text-gray-700 hover:text-black transition">Skills</a>
+                    <a href="#contact" class="text-gray-700 hover:text-black transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-500 hover:text-indigo-600">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
-</nav>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-600 transition">About</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Projects</a>
+            <a href="#skills" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Skills</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Hi, I'm <span class="text-gray-300">Elliot</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-300 mb-6">Frontend Developer</h2>
+                    <p class="text-gray-300 mb-8 max-w-lg">I create beautiful, responsive websites with clean code and modern technologies.</p>
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition">View Work</a>
+                        <a href="#contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition">Contact Me</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="bg-white p-2 rounded-full shadow-xl">
+                        <img src="Ellie.png" alt="Developer" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up">About Me</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center" data-aos="fade-right">
+                    <img src="http://static.photos/workspace/640x360/23" alt="About" class="rounded-lg shadow-lg w-full max-w-md">
+                </div>
+                <div class="md:w-2/3 md:pl-12" data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Who am I?</h3>
+                    <p class="text-gray-600 mb-6">I'm a passionate frontend developer with 1 and a half  years of experience creating modern, responsive websites and web applications. I specialize in HTML, CSS, JavaScript and modern frameworks.</p>
+                    <p class="text-gray-600 mb-6">My approach combines aesthetic design with functional code to deliver seamless user experiences. I believe in clean, maintainable code and staying up-to-date with the latest web technologies.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <i data-feather="calendar" class="text-black mr-2"></i>
+                            <span class="text-gray-700">Age: 19</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="map-pin" class="text-indigo-600 mr-2"></i>
+                            <span class="text-gray-700">Location: Nigeria</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="briefcase" class="text-indigo-600 mr-2"></i>
+                            <span class="text-gray-700">Freelance: Available</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="award" class="text-black mr-2"></i>
+                            <span class="text-gray-700">Experience: 1.5 years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up">My Projects</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-aos="fade-up">
+                    <img src="Black and Gold Elegant Personal Logo.png" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Faith Ose Ebhodaghe Business Website</h3>
+                        <p class="text-gray-600 mb-4">A fully responsive Business platform built with HTML, CSS, and JavaScript.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-200 text-black text-xs px-3 py-1 rounded-full">HTML</span>
+                            <span class="bg-gray-200 text-black text-xs px-3 py-1 rounded-full">CSS</span>
+                            <span class="bg-gray-200 text-black text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-gray-200 text-black text-xs px-3 py-1 rounded-full">Tailwind</span>
+                        </div>
+                        <a href="https://www.faithoseebhodaghe.com/" class="text-black hover:text-gray-800 font-medium inline-flex items-center">
+                            View Project <i data-feather="arrow-right" class="ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <img src="recipe pic.jpg" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Recipe Website</h3>
+                        <p class="text-gray-600 mb-4">A clean admin dashboard interface recipe site .</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">HTML</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">CSS</span>
+                        </div>
+                        <a href="https://elliot-coder1.github.io/Elliot-recipe/" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                            View Project <i data-feather="arrow-right" class="ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <img src="hotelpic.jpg" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hotel Template</h3>
+                        <p class="text-gray-600 mb-4">A modern Hotel template for hotel owner.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">HTML</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">CSS</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                        </div>
+                        <a href=" https://elliot-coder1.github.io/Etham-hotel/" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                            View Project <i data-feather="arrow-right" class="ml-1"></i>
+                        </a>
+                    </div>
+                </div>
 
 
+                 <!-- Project 4 -->
+                 <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                  <img src="blog.jpg" alt="Project 3" class="w-full h-48 object-cover">
+                  <div class="p-6">
+                      <h3 class="text-xl font-semibold text-gray-800 mb-2">Blog Template</h3>
+                      <p class="text-gray-600 mb-4">Customisable Blog template for creative professionals</p>
+                      <div class="flex flex-wrap gap-2 mb-4">
+                          <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">HTML</span>
+                          <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">CSS</span>
+                          <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                      </div>
+                      <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                          View Project <i data-feather="arrow-right" class="ml-1"></i>
+                      </a>
+                  </div>
+              </div>
+            </div>
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="#" class="inline-block bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
 
-   <div class="content mt-5">
-    <div class="text">
-     <p>
-      Welcome to my portfolio!
-     </p>
-     <h1>
-      Hello, my name is
-      <span>
-       OBUKOYIBO OGHENE FEJIRO ELLIOT
-      </span>
-     </h1>
-     <p>
-      I’m a Front end web developer, currently working in Nigeria
-     </p>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up">My Skills</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Coding Skills</h3>
+                    <div class="space-y-6">
+                        <!-- HTML -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">HTML</span>
+                                <span class="text-gray-700">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-black h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <!-- CSS -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">CSS</span>
+                                <span class="text-gray-700">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-black h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <!-- JavaScript -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">JavaScript</span>
+                                <span class="text-gray-700">45%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-black h-2.5 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <!-- Tailwind -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Tailwind CSS</span>
+                                <span class="text-gray-700">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-indigo-600 h-2.5 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Design Skills</h3>
+                    <div class="space-y-6">
+                        <!-- Responsive Design -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Responsive Design</span>
+                                <span class="text-gray-700">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-black h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <!-- Canva -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Canva</span>
+                                <span class="text-gray-700">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="skill-bar bg-black h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-     <p>
-      I have experience with HTML, CSS, JavaScript and frontend framework like Bootstrap. I'm a quick learner and enjoy staying up-to-date with the latest trends and technologies in the industry.
-    </p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up">Get In Touch</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8" data-aos="fade-right">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Contact Information</h3>
+                    <p class="text-gray-600 mb-6">Feel free to reach out to me for any questions or opportunities. I'll get back to you as soon as possible.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-gray-200 p-3 rounded-full mr-4">
+                                <i data-feather="mail" class="text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Email</h4>
+                                <p class="text-gray-600">obukoyibooghenefejiro.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gray-200 p-3 rounded-full mr-4">
+                                <i data-feather="phone" class="text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">WhatsApp</h4>
+                                <p class="text-gray-600">+234 913 437 9366</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gray-200 p-3 rounded-full mr-4">
+                                <i data-feather="map-pin" class="text-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Location</h4>
+                                <p class="text-gray-600">Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-medium text-gray-800 mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Elliot-coder1/" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-black hover:text-white transition">
+                                <i data-feather="github" class="text-black"></i>
+                            </a>
+                            <a href="https://x.com/smartguyellie?t=Tkx9KmYWKK-D53mVYNZ4nA&s=08" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-black hover:text-white transition">
+                                <i data-feather="twitter" class="text-black"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/obukoyibo-oghene-fejiro-elliot-1b3915333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-black hover:text-white transition">
+                                <i data-feather="linkedin" class="text-black"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <form class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <p>
-      In my free time, I enjoy reading, watching movies, and playing video games. I'm also a fan of sports, particularly football and basketball.
-    </p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold text-white">Obukoyibo Elliot</span>
+                    <p class="text-gray-400 mt-2">Creating beautiful digital experiences.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-200 transition">
+                        <i data-feather="github" class="text-black"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="twitter" class="text-black"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="linkedin" class="text-black"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="dribbble" class="text-black"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Ellie Dev. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-     <div class="buttons">
-      <a class="download" href="https://wa,me/09134379366">
-       Hire me
-      </a>
-      <a class="work" href="pop.html">
-       See my work
-      </a>
-     </div>
-    </div>
-    <div class="image">
-     <img alt="ELLIOT" height="300" src="Ellie.png" width="300"/>
-     <div class="decor">
-     </div>
-     <div class="decor2">
-     </div>
-    </div>
-   </div>
-  
-  <script src="script.js"></script>
-  <footer class="footer">
-    <p>&copy; 2025 Obukoyibo oghenefejiro Elliot. All Rights Reserved.</p>
-    <p>obukoyibooghenefejiro@gmail.com</p>
-</footer>
- </body>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Animate skill bars on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+
+            // Animate skill bars when skills section is in view
+            const skillBars = document.querySelectorAll('.skill-bar');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.style.width;
+                        entry.target.style.width = '0';
+                        setTimeout(() => {
+                            entry.target.style.width = width;
+                        }, 100);
+                    }
+                });
+            }, {threshold: 0.1});
+
+            skillBars.forEach(bar => {
+                observer.observe(bar);
+            });
+        });
+
+        feather.replace();
+    </script>
+</body>
 </html>
